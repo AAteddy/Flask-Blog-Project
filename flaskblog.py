@@ -44,6 +44,12 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == "admin@gmail.com" and form.password.data == "password":
+            flash(f"You have been logged in!", "success")
+            return redirect(url_for("home"))
+        else:
+            flash("Login failed. Please check your credentials.", "danger")
     return render_template("login.html", title="Login", form=form)
 
 
