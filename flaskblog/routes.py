@@ -3,6 +3,7 @@ from flaskblog import app
 from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
 
+
 posts = [
     {
         "author": "John Doe",
