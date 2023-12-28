@@ -1,6 +1,5 @@
-from flask import Flask, flash, redirect, render_template, url_for
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from forms import RegistrationForm, LoginForm
 
 
 app = Flask(__name__)
