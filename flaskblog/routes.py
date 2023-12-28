@@ -1,7 +1,7 @@
-from flaskblog.models import User, Post
-from flaskblog import app
 from flask import flash, redirect, render_template, url_for
+from flaskblog import app
 from flaskblog.forms import RegistrationForm, LoginForm
+from flaskblog.models import User, Post
 
 posts = [
     {
